@@ -23,11 +23,12 @@ class SodaMachine
   end
 
   def sell(soda_brand)
-    @sodas.each_with_index do |soda|
+    @sodas.each_with_index do |soda, index|
       if soda.brand == soda_brand
         @cash += 1
       end
-      @sodas.pop(soda_brand)
+        @sodas.pop(index)
+      # @sodas.pop(index)
     end
     return nil
   end
