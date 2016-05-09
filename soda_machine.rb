@@ -21,21 +21,22 @@ class SodaMachine
   end
 
   def sell(soda_brand)
-    # binding.pry
     @sodas.each_with_index do |soda, index|
       if soda.brand == soda_brand
         @cash += 1
+        @sodas.delete_at(index)
       end
         # puts "Before pop!!!!!!!!!!!!!!!!!!!"
         # # p "#{@sodas.pop(index)}"
-        puts @sodas.delete_at(index)
-        puts @sodas
-
+        # binding.pry
+        # p @sodas.delete_at(index)
         # p "#{soda.brand}"
         # puts "After pop"
         # p "$" * 50
         # p @sodas
     end
+    # binding.pry
+    # puts @sodas
 
     return nil
   end
