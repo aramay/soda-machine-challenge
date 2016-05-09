@@ -28,7 +28,6 @@ class SodaMachine
         @cash += 1
       end
         @sodas.pop(index)
-      # @sodas.pop(index)
     end
     return nil
   end
